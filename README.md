@@ -1,6 +1,12 @@
 # Gojek-App-Clone
 Gojek UI clone using Flutter
 
+#### this project made for educational purpose only, the content may have copyrighted contents :
+- Logo
+- Icon
+- Images
+- Font
+
 ## Demo
 ![Alt Text](https://github.com/AloisiusBagas/Gojek-App-Clone/blob/master/Demo/Demo1.gif) 
 ![Alt Text](https://github.com/AloisiusBagas/Gojek-App-Clone/blob/master/Demo/Demo2.gif) 
@@ -8,3 +14,6 @@ Gojek UI clone using Flutter
 
 ## package used
 >flutter_svg: ^0.18.0
+
+
+
