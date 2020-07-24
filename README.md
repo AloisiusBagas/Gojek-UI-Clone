@@ -1,7 +1,8 @@
 # Gojek-App-Clone
 Gojek UI clone using Flutter
 
-#### this project made for educational purpose only, the content may have copyrighted contents :
+#### this project made for educational purpose only(not real project), 
+#### the content may have copyrighted contents :
 - Logo
 - Icon
 - Images
