@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class GopayService extends StatelessWidget {
   const GopayService({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +30,8 @@ class GopayService extends StatelessWidget {
 
 class Gopay extends StatelessWidget {
   const Gopay({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +43,12 @@ class Gopay extends StatelessWidget {
           SvgPicture.asset(
             "assets/icons/gopaylogo.svg",
             height: 15,
-            color: Colors.white,
+            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
           ),
           Text("Rp8.350",
               style: Theme.of(context)
                   .textTheme
-                  .bodyText1
+                  .bodyLarge!
                   .copyWith(color: Colors.white, fontSize: 12))
         ],
       ),
@@ -58,8 +58,8 @@ class Gopay extends StatelessWidget {
 
 class Headerbutton extends StatelessWidget {
   const Headerbutton({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -96,10 +96,10 @@ class ButtonHeader extends StatelessWidget {
   final String imgpath;
   final String text;
   const ButtonHeader({
-    Key key,
-    this.imgpath,
-    this.text,
-  }) : super(key: key);
+    super.key,
+    required this.imgpath,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +118,7 @@ class ButtonHeader extends StatelessWidget {
           text,
           style: Theme.of(context)
               .textTheme
-              .bodyText1
+              .bodyLarge!
               .copyWith(color: Colors.white),
         )
       ],

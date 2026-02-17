@@ -56,7 +56,8 @@ class _HomeState extends State<Home> {
           SvgPicture.asset(
             iconpath,
             height: 19,
-            color: curridx == index ? GreenColor : BottomIcon,
+            colorFilter: ColorFilter.mode(
+                curridx == index ? GreenColor : BottomIcon, BlendMode.srcIn),
           ),
           SizedBox(
             height: 3,
@@ -74,4 +75,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-

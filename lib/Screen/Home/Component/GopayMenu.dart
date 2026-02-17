@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class GopayMenu extends StatelessWidget {
   const GopayMenu({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class GopayMenu extends StatelessWidget {
                 "Your nearest Alfamart - 58 m away",
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText1
+                    .bodyLarge!
                     .copyWith(fontSize: 13),
               ),
               SizedBox(height: 16),
@@ -50,7 +50,7 @@ class GopayMenu extends StatelessWidget {
                         "Top Up at a Store Near You",
                         style: Theme.of(context)
                             .textTheme
-                            .bodyText1
+                            .bodyLarge!
                             .copyWith(fontSize: 12),
                       ),
                       SizedBox(height: 8),
@@ -75,10 +75,14 @@ class GopayMenu extends StatelessWidget {
               height: 32,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5), color: Color(0xFF27A626)),
+                  borderRadius: BorderRadius.circular(5),
+                  color: Color(0xFF27A626)),
               child: Text(
                 "TOP UP",
-                style: Theme.of(context).textTheme.bodyText1.copyWith(color:Colors.white),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyLarge!
+                    .copyWith(color: Colors.white),
               ),
             ),
           )
