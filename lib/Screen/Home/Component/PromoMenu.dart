@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:cloning_gojekapp/Constant.dart';
 import 'package:cloning_gojekapp/Screen/Home/Component/GofoodMenu.dart';
 import 'package:cloning_gojekapp/Screen/Home/Component/GopayMenu.dart';
@@ -8,8 +6,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class PromoMenu extends StatelessWidget {
   const PromoMenu({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -82,15 +80,15 @@ class PromoBanner extends StatelessWidget {
   final String iconpath;
   final String title;
   final String buttontext;
-  final sizeicon;
+  final double? sizeicon;
   const PromoBanner({
-    Key key,
-    this.imgpath,
-    this.iconpath,
-    this.title,
-    this.buttontext,
+    super.key,
+    required this.imgpath,
+    required this.iconpath,
+    required this.title,
+    required this.buttontext,
     this.sizeicon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -104,21 +102,25 @@ class PromoBanner extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-  decoration: BoxDecoration(
-    gradient: LinearGradient(
-      begin: Alignment.bottomCenter,
-      end: Alignment.topCenter, 
-      colors: [Colors.black.withOpacity(0.5), Colors.transparent,Colors.black.withOpacity(0.6), ],
-    ),
-  ),
-),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [
+                  Colors.black.withValues(alpha: 0.5),
+                  Colors.transparent,
+                  Colors.black.withValues(alpha: 0.6),
+                ],
+              ),
+            ),
+          ),
           Positioned(
             top: 18,
             left: 16,
             child: SvgPicture.asset(
               iconpath,
               height: sizeicon,
-              color: Colors.white,
+              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
           ),
           Positioned(
@@ -128,7 +130,7 @@ class PromoBanner extends StatelessWidget {
               title,
               style: Theme.of(context)
                   .textTheme
-                  .bodyText1
+                  .bodyLarge!
                   .copyWith(color: Colors.white, fontSize: 14),
             ),
           ),
@@ -144,7 +146,7 @@ class PromoBanner extends StatelessWidget {
                 buttontext,
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText1
+                    .bodyLarge!
                     .copyWith(color: Colors.white),
               ),
             ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class ServiceMenu extends StatelessWidget {
   const ServiceMenu({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class ServiceMenu extends StatelessWidget {
                 text: "GO-PULSA",
                 press: () {},
               ),
-                                  ServiceBtn(
+              ServiceBtn(
                 imgpath: "assets/images/lainnya.png",
                 text: "Lainnya",
                 press: () {},
@@ -72,13 +72,13 @@ class ServiceMenu extends StatelessWidget {
 class ServiceBtn extends StatelessWidget {
   final String imgpath;
   final String text;
-  final Function press;
+  final VoidCallback press;
   const ServiceBtn({
-    Key key,
-    this.imgpath,
-    this.text,
-    this.press,
-  }) : super(key: key);
+    super.key,
+    required this.imgpath,
+    required this.text,
+    required this.press,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +92,7 @@ class ServiceBtn extends StatelessWidget {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(color: Colors.grey[100], width: 1.5),
+              border: Border.all(color: Colors.grey[100]!, width: 1.5),
               borderRadius: BorderRadius.circular(14),
             ),
             child: Image.asset(
@@ -105,7 +105,7 @@ class ServiceBtn extends StatelessWidget {
         ),
         Text(
           text,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
       ],
     );
